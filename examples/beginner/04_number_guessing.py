@@ -76,8 +76,13 @@ while not game_over and attempts < max_attempts:
             
     except ValueError:
         print("❌ 숫자만 입력해주세요! (예: 50)")
+    except KeyboardInterrupt:
+        print("\n❌ 게임이 중단되었습니다! 다음에 다시 도전해주세요!")
+        sys.exit(1)
     except Exception as e:
-        print(f"❌ 예상치 못한 오류: {e}")
+        print(f"❌ 예상치 못한 오류가 발생했습니다: {e}")
+        print("🚨 프로그램을 종료합니다. 문제가 지속되면 개발자에게 문의하세요.")
+        sys.exit(1)
 
 # 게임 종료 처리
 if not game_over:
