@@ -90,8 +90,9 @@ while True:
             
     except ValueError:
         print("❌ 숫자를 입력해주세요!")
-    except Exception as e:
-        print(f"❌ 오류가 발생했습니다: {e}")
+    except KeyboardInterrupt:
+        print("\n❌ 프로그램이 중단되었습니다. 종료합니다.")
+        break
 
 print("\n💡 학습 포인트:")
 print("✅ 함수로 코드를 깔끔하게 정리했어요")
